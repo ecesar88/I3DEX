@@ -46,19 +46,18 @@ echo "== > Copiando arquivos"
     sudo cp -r /etc/xdg/termite $HOME/GitHub/I3DEX/config
 echo "== >"
 
-echo "Arquivos copiados"
-    notify-send "Cópia concluída" ;
-echo "== >"
-
 if pergunta "== > Fazer upload para o GitHub?" S; then
     cd $HOME/GitHub/I3DEX ;
     git add --all ;
     git commit ;
     git push -u origin master ;
     notify-send "Arquivos upados" ;
+    canberra-gtk-play --file=$HOME/.config/sons/bip.wav
+    exit
 echo "== >"
 fi
 
 echo "== > Finalizando"
-canberra-gtk-play --file=$HOME/.config/sons/bip.wav
+    notify-send "Cópia concluída" ;
+    canberra-gtk-play --file=$HOME/.config/sons/bip.wav
 echo "== >"

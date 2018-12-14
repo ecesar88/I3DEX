@@ -47,7 +47,7 @@ if pergunta "== > Instalar TRIZEN? Não é necessário instalar caso já tenha!"
     echo "== >"
 fi
 
-echo "== > Instalando pacotes essenciais com o TRIZEN.\e[0m"
+echo "== > Instalando pacotes essenciais com o TRIZEN."
     trizen -S --needed google-chrome polybar visual-studio-code-bin nerd-fonts-source-code-pro --noconfirm
 echo "== >"
 
@@ -65,7 +65,7 @@ echo "== >"
 echo "== > Habilitando serviços"
     echo "==== > Habilitando conexão com a internet"
         sudo systemctl enable dhcpcd.service
-        sudosystemctl start dhcpcd
+        sudo systemctl start dhcpcd
     echo "==== >"
     echo "==== > Habilitando networkmanager"
         sudo systemctl enable NetworkManager.service

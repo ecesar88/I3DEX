@@ -2,7 +2,7 @@
 # contato@jirrezdex.com
 # Jirrez Matheus
 
-################ Básico | Basic
+################ Básico
 [options]
 transparency = 0.8
 font = Fira Mono 9
@@ -15,16 +15,16 @@ icon_name = terminal
 scrollback_lines = 999999
 urgent_on_bell = true
 
-################ Navegador | Browser
+################ Navegador
 browser = google-chrome-stable
 
 ################ Cursor cego | system | on | off
 cursor_blink = on
 
-################ Cursor - bloco - sublinhado - ibeam | Cursor | block | underline | ibeam
+################ Cursor - bloco - sublinhado - ibeam
 cursor_shape = ibeam
 
-################ Cores | Colors
+################ Cores
 [colors]
 foreground = #339AF0
 background = rgba(0, 2, 33, 0.8)
