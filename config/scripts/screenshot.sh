@@ -27,7 +27,7 @@ command -v $app >/dev/null 2>&1 || {
 	msg="O aplicativo $app não está instalado" 
 
 	command -v notify-send >/dev/null 2>&1 && {
-		notify-send "ERRO | ERROR" "$msg";
+		notify-send "ERRO" "$msg";
 	} || {
 		echo $msg;
 	}

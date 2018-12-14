@@ -9,10 +9,10 @@ audio=$(pacmd list-sinks | grep -A 1 'index: 0' | awk 'NR==2{print $2}' | awk '{
 app="ffmpeg"
 
 command -v $app >/dev/null 2>&1 || {
-	msg="O aplicativo $app não está instalado | The $app application is not installed" 
+	msg="O aplicativo $app não está instalado" 
 
 	command -v notify-send >/dev/null 2>&1 && {
-		notify-send "ERRO | ERROR" "$msg";
+		notify-send "ERRO" "$msg";
 	} || {
 		echo $msg;
 	}
@@ -39,13 +39,13 @@ if [ ! $1 ]; then
         if [ ! $1 ]; then
                 canberra-gtk-play --file=$HOME/.config/sons/bip.wav
                 killall ffmpeg
-                notify-send "Gravação finalizada | Recording finished"
+                notify-send "Gravação finalizada"
                 exit 0
         fi
         else
         [ "$(pgrep -x polybar)" ] && [ "$1" == "status" ] && echo "" && exit
         if [ ! "$1" ]; then
-                notify-send "Gravação iniciada | Recording started"
+                notify-send "Gravação iniciada"
                 canberra-gtk-play --file=$HOME/.config/sons/bip.wav
                 ffmpeg -f x11grab -s $resolucao -i :0 -f pulse -ac 2 -i default -c:v libx264 -crf 23 -profile:v baseline -level 3.0 -pix_fmt yuv420p -c:a aac -ac 2 -strict experimental -b:a 128k -movflags faststart $arquivo
         fi

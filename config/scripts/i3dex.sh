@@ -32,7 +32,7 @@ echo "== > Olá "$USER", estamos iniciando a instalação da última versão do 
     echo "== >"
 
 echo "== > Instalando pacotes essenciais"
-    sudo pacman -S --needed alsa-utils compton dunst i3-gaps networkmanager notify-osd playerctl pulseaudio pulseaudio-alsa rofi sddm termite ttf-dejavu xorg-server xorg-xinit xorg-xprop xorg-xrandr ttf-fira-sans ttf-fira-mono ranger feh playerctl scrot maim git 
+    sudo pacman -S --needed alsa-utils ffmpeg compton dunst i3-gaps networkmanager notify-osd playerctl pulseaudio pulseaudio-alsa rofi sddm termite ttf-dejavu xorg-server xorg-xinit xorg-xprop xorg-xrandr ttf-fira-sans ttf-fira-mono ranger feh playerctl scrot maim git 
     echo "== >"
 
 if pergunta "== > Instalar TRIZEN? Não é necessário instalar caso já tenha!" S; then
@@ -113,7 +113,7 @@ echo "== >"
 echo "Removendo arquivos desnecessários"
     cd ..
     cd ..
-    sudo rm -dR ArchDex ;
+    sudo rm -dR I3DEX ;
 echo "== >"
 
 if pergunta "== > Remover arquivos da configuração pessoal do desenvolvedor? Recomendado, os arquivos podem causar problemas na sua instalação!" S; then
