@@ -100,6 +100,10 @@ echo "== >"
 echo "== > Instalando configuração"
     echo "= > Instalando arquivos básicos"
         cp -r {papeldeparede,compton,dunst,i3,polybar,rofi,scripts,sons} $HOME/.config
+        cd ranger
+        rm rm -dR $HOME/.config/ranger/rc.conf
+        cp -r rc.conf $HOME/.config/ranger
+        cd ..
     echo "= > Instalando fontes"
         mkdir $HOME/.local/share/fonts
         cd fonts
