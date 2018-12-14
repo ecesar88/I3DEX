@@ -6,7 +6,7 @@
   
 * Requisitos: Pendrive bootável com o Arch Linux e conexão cabeada:
 
-## ⚙ 1° Passo: Baixe o Etcher e o Arch Linux.
+## ⚙ 1° Passo: Baixe o Etcher e o Arch Linux:
 O  Etcher vai ser usado para criar o pendrive bootável - [SITE](https://www.balena.io/etcher/).
 ![Etcher Usage.](https://www.balena.io/static/steps-8006dca57323756b1b84fb9408742409.gif)
 
