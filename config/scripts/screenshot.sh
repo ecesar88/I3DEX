@@ -12,7 +12,7 @@ fi
 
 app="maim"
 params="-u"
-data=$(date +%H-%M-%S-%d-%m-%Y)
+data=$(date +%Y-%m-%d--%H-%M-%S)
 nome="Screenshot--${data}"
 extensao=".png"
 atraso=10
