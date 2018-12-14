@@ -51,17 +51,6 @@ echo "== > Instalando pacotes essenciais com o TRIZEN."
     trizen -S --needed google-chrome polybar nerd-fonts-source-code-pro --noconfirm
 echo "== >"
 
-echo "== > Configurando o Ranger"
-    mkdir RANGER-DEX
-    cd RANGER-DEX
-    git clone https://github.com/alexanderjeurissen/ranger_devicons.git
-    cd ranger_devicons/
-    make install
-    cd ..
-    cd ..
-    sudo rm -dR RANGER-DEX
-echo "== >"
-
 echo "== > Habilitando serviços"
     echo "= > Habilitando conexão com a internet"
         sudo systemctl enable dhcpcd.service
@@ -94,16 +83,12 @@ echo "== > Fornecendo permissão aos scripts"
 echo "== >"
 
 echo "== > Medidade de segurança"
-    rm -dR $HOME/.config/{papeldeparede,compton,dunst,i3,polybar,rofi,scripts,sons}
+    rm -dR $HOME/.config/{papeldeparede,ranger,compton,dunst,i3,polybar,rofi,scripts,sons}
 echo "== >"
 
 echo "== > Instalando configuração"
     echo "= > Instalando arquivos básicos"
-        cp -r {papeldeparede,compton,dunst,i3,polybar,rofi,scripts,sons} $HOME/.config
-        cd ranger
-        rm rm -dR $HOME/.config/ranger/rc.conf
-        cp -r rc.conf $HOME/.config/ranger
-        cd ..
+        cp -r {papeldeparede,ranger,compton,dunst,i3,polybar,rofi,scripts,sons} $HOME/.config
     echo "= > Instalando fontes"
         mkdir $HOME/.local/share/fonts
         cd fonts
