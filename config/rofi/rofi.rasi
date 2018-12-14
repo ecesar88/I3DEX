@@ -6,7 +6,7 @@ Jirrez Matheus
 
 /* Cores */
 * {
-	background: 	#000000CC;
+	background: 	#0F111ACC;
 	texto-branco: 	#FFFFFF;
 	texto-azul:		#339AF0;
 }

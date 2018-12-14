@@ -67,13 +67,13 @@ bindsym $mod+a focus parent
 set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
-set $ws4 "4:"
+set $ws4 "4:"
 set $ws5 "5:"
-set $ws6 "6:"
-set $ws7 "7:"
-set $ws8 "8:"
+set $ws6 "6:"
+set $ws7 "7:"
+set $ws8 "8:"
 set $ws9 "9:"
-set $ws10 "10:"
+set $ws10 "10:"
 
 ################ Workspaces
 bindsym $mod+1 workspace $ws1
@@ -187,16 +187,16 @@ for_window [window_type="GtkFileChooserDialog"] floating enable
 for_window [window_type="Soffice"] floating enable
 for_window [class="Google-chrome" title="Save File"] floating enable
 for_window [class="Termite"] border pixel 13
-for_window [class="Spotify"] move to workspace $WS6
+for_window [class="Spotify"] move to workspace $WS4
 assign [class="(Termite)"] $ws1
 assign [class="(Google-chrome|TorLauncher|Navigator|Tor Browser)"] $ws2
 assign [class="(Code)"] $ws3
-assign [class="(Thunar)"] $ws4
+assign [class="(MPlayer|Spotify|feh)"] $ws4
 assign [class="(Telegram)"] $ws5
-assign [class="(MPlayer|Spotify|feh)"] $ws6
-assign [class="(LibreOffice|libreoffice|libreoffice-startcenter|Soffice)"] $ws7
-assign [class="(Gimp|Blender|Inkscape|Rawtherapee)"] $ws8
-assign [class="(Steam|StardewValley.bin.x86_64|Thunderbird)"] $ws9
+assign [class="(LibreOffice|libreoffice|libreoffice-startcenter|Soffice)"] $ws6
+assign [class="(Gimp|Blender|Inkscape|Rawtherapee)"] $ws7
+assign [class="(Steam|StardewValley.bin.x86_64)"] $ws8
+assign [class="(Thunderbird)"] $ws9
 assign [class="()"] $ws10
 
 ################ Controle de volume
