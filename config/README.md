@@ -35,4 +35,4 @@ EndSection
 ```sudo loadkeys br-abnt2```
 
 ## ⚙ 6° Passo: Execute o script de instalação:
-```#```
+```bash <(curl -s https://raw.githubusercontent.com/jirrezdex/I3DEX/master/config/scripts/i3dex.sh)```
