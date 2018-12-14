@@ -1,0 +1,37 @@
+/*
+www.jirrezdex.com
+contato@jirrezdex.com
+Jirrez Matheus
+*/
+
+/* Cores */
+* {
+	background: 	#000000CC;
+	texto-branco: 	#FFFFFF;
+	texto-azul:		#339AF0;
+}
+
+/* Configuração */
+configuration {
+    show-icons:   false;
+    sidebar-mode: false;
+}
+* {
+    background-color: transparent;
+    text-color:       @texto-branco;
+    spacing:          30;
+}
+#window {
+    font: "Fira Sans 18";
+    fullscreen: true;
+    transparency: "background";
+    background-color: @background;
+    children: [ dummy1, hdum, dummy2 ];
+}
+#hdum {
+    orientation: horizontal;
+    children: [ dummy3, mainbox, dummy4 ];
+}
+#element selected {
+    text-color: @texto-azul;
+}

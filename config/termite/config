@@ -1,0 +1,52 @@
+# www.jirrezdex.com
+# contato@jirrezdex.com
+# Jirrez Matheus
+
+################ Básico | Basic
+[options]
+transparency = 0.8
+font = Fira Mono 9
+use_xft = true
+allow_bold = true
+audible_bell = false
+clickable_url = true
+dynamic_title = true
+icon_name = terminal
+scrollback_lines = 999999
+urgent_on_bell = true
+
+################ Navegador | Browser
+browser = google-chrome-stable
+
+################ Cursor cego | system | on | off
+cursor_blink = on
+
+################ Cursor - bloco - sublinhado - ibeam | Cursor | block | underline | ibeam
+cursor_shape = ibeam
+
+################ Cores | Colors
+[colors]
+foreground = #339AF0
+background = rgba(0, 2, 33, 0.8)
+
+foreground_bold = #339AF0
+cursor = #339AF0
+cursor_foreground = #339AF0
+highlight = #339AF0
+
+color0 = #2D253A
+color1 = #4968C6
+color2 = #1861B4
+color3 = #2E65BE
+color4 = #1256A4
+color5 = #134C96
+color6 = #134389
+color7 = #3E4995
+color8 = #133C7F
+color9 = #353A72
+color10 = #2D253A
+color11 = #4968C6
+color12 = #1861B4
+color13 = #2E65BE
+color14 = #1256A4
+color15 = #134C96

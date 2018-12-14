@@ -1,0 +1,371 @@
+# www.jirrezdex.com
+# contato@jirrezdex.com
+# Jirrez Matheus
+
+################ Icones
+;                    
+;                     
+;                     
+;                     
+;                     
+;                     
+;                     
+;                     
+;                     
+;                     
+;                     
+;                     
+;               
+
+################ Cores
+[cores]
+barra = #000000CC
+borda = #000000CC
+fonte = #FFFFFF
+menu = #339AF0
+i3dex = #00FFFF
+upar = #00FFFF
+screencast = #F0E68C
+screenshot = #F0E68C
+i3 = #339AF0
+desfocado = #FFFFFF
+visivel = #000000
+urgente = #FF3030
+teclado = #6B8E23
+indicador = #000000CC
+temperatura = #FF4500
+quente = #FF4500
+bateria = #FFFF00
+hora = #DF01D7
+data = #00FFFF
+som = #0489B1
+vazio =#FFFFFF
+spotify = #1DB954
+janela = #2196FF
+voltar =#FF0040
+tocar-parar = #FF0040
+avancar =#FF0040
+arquivos = #663399
+memoria = #DB7093
+cpu = #87CEEB
+wireless = #00FF00
+usuario = #FF1493
+
+################ Barra de cima
+[bar/cima]
+width = 100%
+height = 23
+radius = 0.0
+fixed-center = true
+bottom = false
+background = ${cores.barra}
+foreground = ${cores.fonte}
+line-size = 3
+line-color = ${cores.barra}
+border-size = 1
+border-color = ${cores.borda}
+padding-left = 2
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 1
+font-0 = Fira Sans:size=10:antialias=true;0;0
+font-1 = feather:pixelsize=10
+modules-left = menu i3dex upar screencast screenshot
+modules-center = i3
+modules-right = temperatura bateria hora data
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+################ Barra de baixo
+[bar/baixo]
+width = 100%
+height = 23
+radius = 0.0
+fixed-center = true
+bottom = true
+background = ${cores.barra}
+foreground = ${cores.fonte}
+line-size = 3
+line-color = ${cores.barra}
+border-top-size = 1
+border-color = ${cores.borda}
+padding-left = 2
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 1
+font-0 = Fira Sans:size=10:antialias=true;0;0
+font-1 = feather:pixelsize=10
+modules-left = som spotify
+modules-center = janela
+modules-right = voltar tocar-parar avancar arquivos memoria cpu wireless usuario
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+################ Menu
+[module/menu]
+type = custom/text
+content = 
+content-foreground = ${cores.menu}
+click-left = exec rofi -show run -display-run "I3DEX"
+
+################ Versão
+[module/i3dex]
+type = custom/text
+content = 
+content-foreground = ${cores.i3dex}
+click-left = termite -e $HOME/.config/scripts/i3dex.sh &
+
+################ Upar
+[module/upar]
+type = custom/text
+content = 
+content-foreground = ${cores.updar}
+click-left = termite -e $HOME/.config/scripts/upar.sh &
+
+################ Screencast
+[module/screencast]
+type = custom/script
+interval = 1
+label = %output%
+label-foreground = ${cores.screencast}
+click-left = termite -e $HOME/.config/scripts/screencast.sh &
+exec = $HOME/.config/scripts/screencast.sh status
+tail = true
+
+################ Screenshot
+[module/screenshot]
+type = custom/text
+content = 
+content-foreground = ${cores.screenshot}
+click-left = $HOME/.config/scripts/screenshot.sh &
+
+################ I3
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+strip-wsnumbers = true
+label-mode = %mode%
+label-mode-padding = 1
+label-focused = %name%
+label-focused-padding = 1
+label-focused-foreground = ${cores.i3}
+label-unfocused = %name%
+label-unfocused-padding = 1
+label-unfocused-foreground = ${cores.desfocado}
+label-visible = %name%
+label-visible-padding = 1
+label-visible-foreground = ${cores.visivel}
+label-urgent = %name%
+label-urgent-padding = 1
+label-urgent-foreground = ${cores.urgente}
+
+################ Temperatura
+[module/temperatura]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+format = <ramp> <label>
+format-foreground = ${cores.temperatura}
+format-warn = <ramp> <label-warn>
+format-warn-foreground = ${cores.quente}
+label = %temperature-c%
+label-foreground= ${cores.temperatura}
+label-warn = %temperature-c%
+label-warn-foreground= ${cores.quente}
+ramp-0 = 
+ramp-foreground= ${cores.temperatura}
+
+################ Bateria
+[module/bateria]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+label-charging-foreground = ${cores.bateria}
+label-discharging-foreground = ${cores.bateria}
+format-charging = <animation-charging> <label-charging>
+format-charging-foreground = ${cores.bateria}
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-foreground = ${cores.bateria}
+format-full-prefix = " "
+format-full-prefix-foreground = ${cores.bateria}
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = ${cores.bateria}
+animation-charging-0 = 
+animation-charging-0-foreground = ${cores.bateria}
+animation-charging-framerate = 750
+animation-discharging-0 = 
+animation-discharging-0-foreground = ${cores.bateria}
+animation-discharging-framerate = 750
+
+################ Hora
+[module/hora]
+type = internal/date
+interval = 1
+time = %H:%M
+format =  <label>
+format-foreground = ${cores.hora}
+label = %time%
+
+################ Data
+[module/data]
+type = internal/date
+interval = 1
+date = %d/%m/%Y
+format =  <label>
+format-foreground = ${cores.data}
+label = %date%
+
+################ Som
+[module/som]
+type = internal/alsa
+format-volume = <label-volume> <bar-volume>
+label-volume = 
+label-volume-foreground = ${cores.som}
+format-muted-prefix = " "
+format-muted-prefix-foreground = ${cores.som}
+label-muted = ||||||||||||||||||||||||||||||
+label-muted-foreground = ${cores.vazio}
+bar-volume-width = 30
+bar-volume-gradient = false
+bar-volume-foreground-0 = ${cores.som}
+bar-volume-indicator = |
+bar-volume-indicator-font = 5
+bar-volume-indicator-foreground = ${cores.som}
+bar-volume-fill = |
+bar-volume-fill-font = 5
+bar-volume-empty = |
+bar-volume-empty-font = 5
+bar-volume-empty-foreground = ${cores.vazio}
+
+################ Spotify
+[module/spotify]
+type = custom/script
+label = %output%
+label-maxlen = 50
+label-foreground = ${cores.spotify}
+exec = $HOME/.config/scripts/spotify.sh
+
+################ Janela
+[module/janela]
+type = internal/xwindow
+format-prefix = " "
+format-prefix-foreground = ${cores.janela}
+format = <label>
+format-foreground = ${cores.janela}
+format-padding = 4
+label = %title%
+label-maxlen = 50
+label-empty = Sem janelas
+label-empty-foreground = ${cores.janela}
+
+################ Controlador voltar
+[module/voltar]
+type = custom/text
+content = 
+content-foreground = ${cores.voltar}
+click-left = playerctl previous
+
+################ Controlador play & pause
+[module/tocar-parar]
+type = custom/text
+content = 
+content-foreground = ${cores.tocar-parar}
+click-left = playerctl play-pause
+
+################ Controlador avançar
+[module/avancar]
+type = custom/text
+content = 
+content-foreground = ${cores.avancar}
+click-left = playerctl next
+
+################ Arquivos
+[module/arquivos]
+type = internal/fs
+interval = 25
+mount-0 = /
+label-mounted =  %mountpoint%: %percentage_used%%
+label-mounted-foreground = ${cores.arquivos}
+label-unmounted = %mountpoint% Não montado
+label-unmounted-foreground = ${cores.arquivos}
+
+################ Memória
+[module/memoria]
+type = internal/memory
+interval = 0.2
+format = <label>
+label =  %percentage_used%%
+label-foreground = ${cores.memoria}
+
+################ CPU
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label> <ramp-coreload>
+label = 
+label-foreground = ${cores.cpu}
+ramp-coreload-0 = 
+ramp-coreload-0-font = 2
+ramp-coreload-0-foreground = ${cores.cpu}
+ramp-coreload-1 = 
+ramp-coreload-1-font = 2
+ramp-coreload-1-foreground = ${cores.cpu}
+ramp-coreload-2 = 
+ramp-coreload-2-font = 2
+ramp-coreload-2-foreground = ${cores.cpu}
+ramp-coreload-3 = 
+ramp-coreload-3-font = 2
+ramp-coreload-3-foreground = ${cores.cpu}
+ramp-coreload-4 = 
+ramp-coreload-4-font = 2
+ramp-coreload-4-foreground = ${cores.cpu}
+ramp-coreload-5 = 
+ramp-coreload-5-font = 2
+ramp-coreload-5-foreground = ${cores.cpu}
+ramp-coreload-6 = 
+ramp-coreload-6-font = 2
+ramp-coreload-6-foreground = ${cores.cpu}
+ramp-coreload-7 = 
+ramp-coreload-7-font = 2
+ramp-coreload-7-foreground = ${cores.cpu}
+
+################ Wireless
+[module/wireless]
+type = internal/network
+interface = wlo1
+format-connected = " <label-connected>"
+format-connected-foreground = ${cores.wireless}
+label-connected = %essid%
+
+################ Usuário
+[module/usuario]
+type = custom/script
+interval = 1
+format-prefix = " "
+format-prefix-foreground = ${cores.usuario}
+exec = echo $USER
+format-foreground = ${cores.usuario}
+
+################ Definições
+[settings]
+screenchange-reload = true
+
+################ WM
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
