@@ -50,7 +50,7 @@ memoria = #DB7093
 cpu = #87CEEB
 wireless = #00FF00
 usuario = #FF1493
-energia = #FF3030
+sistema = #FF3030
 
 ################ Barra de cima
 [bar/cima]
@@ -98,7 +98,7 @@ font-0 = Fira Sans:size=10:antialias=true;0;0
 font-1 = feather:pixelsize=10
 modules-left = som spotify
 modules-center = janela
-modules-right = voltar tocar-parar avancar arquivos memoria cpu wireless usuario energia
+modules-right = voltar tocar-parar avancar arquivos memoria cpu wireless usuario sistema
 cursor-click = pointer
 cursor-scroll = ns-resize
 
@@ -361,10 +361,10 @@ exec = echo $USER
 format-foreground = ${cores.usuario}
 
 ################ Versão
-[module/energia]
+[module/sistema]
 type = custom/text
 content = 
-content-foreground = ${cores.energia}
+content-foreground = ${cores.sistema}
 click-left = exec $HOME/.config/scripts/sistema.sh
 
 ################ Definições
