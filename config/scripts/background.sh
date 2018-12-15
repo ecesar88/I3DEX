@@ -11,6 +11,6 @@ HORA=$(date "+%k")
         feh --bg-scale $HOME/.config/papeldeparede/Dia.png ;
     else
         feh --bg-scale $HOME/.config/papeldeparede/Noite.png ;
-fi 
+fi
 sleep 60m ;
 done

@@ -32,7 +32,7 @@ echo "== > Olá "$USER", estamos iniciando a instalação da última versão do 
     echo "== >"
 
 echo "== > Instalando pacotes essenciais"
-    sudo pacman -S --needed alsa-utils ffmpeg compton dunst i3-gaps networkmanager notify-osd playerctl pulseaudio pulseaudio-alsa rofi sddm termite ttf-dejavu xorg-server xorg-xinit xorg-xprop xorg-xrandr ttf-fira-sans ttf-fira-mono ranger feh scrot maim git --noconfirm
+    sudo pacman -S --needed alsa-utils ffmpeg mpv compton dunst i3-gaps networkmanager notify-osd playerctl pulseaudio pulseaudio-alsa rofi sddm termite ttf-dejavu xorg-server xorg-xinit xorg-xprop xorg-xrandr ttf-fira-sans ttf-fira-mono ranger feh scrot maim git --noconfirm
     echo "== >"
 
 if pergunta "== > Instalar TRIZEN? Não é necessário instalar caso já tenha!" S; then
@@ -48,7 +48,7 @@ if pergunta "== > Instalar TRIZEN? Não é necessário instalar caso já tenha!"
 fi
 
 echo "== > Instalando pacotes essenciais com o TRIZEN."
-    trizen -S --needed google-chrome polybar nerd-fonts-source-code-pro --noconfirm
+    trizen -S --needed google-chrome polybar nerd-fonts-source-code-pro pqiv --noconfirm
 echo "== >"
 
 echo "== > Habilitando serviços"

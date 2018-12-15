@@ -40,7 +40,7 @@ file_node_extensions = {
     'erl'      : '',
     'f#'       : '',
     'fish'     : '',
-    'flac'     : '',
+    'flac'     : '',
     'flv'      : '',
     'fs'       : '',
     'fsi'      : '',
@@ -78,12 +78,12 @@ file_node_extensions = {
     'ml'       : 'λ',
     'mli'      : 'λ',
     'mov'      : '',
-    'mp3'      : '',
+    'mp3'      : '',
     'mp4'      : '',
     'mpeg'     : '',
     'mpg'      : '',
     'mustache' : '',
-    'ogg'      : '',
+    'ogg'      : '',
     'pdf'      : '',
     'php'      : '',
     'pl'       : '',
@@ -117,7 +117,7 @@ file_node_extensions = {
     'twig'     : '',
     'vim'      : '',
     'vimrc'    : '',
-    'wav'      : '',
+    'wav'      : '',
     'xml'      : '',
     'xul'      : '',
     'xz'       : '',
@@ -126,16 +126,18 @@ file_node_extensions = {
 }
 
 dir_node_exact_matches = {
-    '.git'                             : '',
-    'GitHub'                           : '',
-    'Downloads'                        : '',
-    'Documentos'                       : '',
-    'Imagens'                          : '',
-    'Modelos'                          : '',
-    'Músicas'                           : '',
-    'Público'                          : '',
-    'Vídeos'                           : '',
-    'Área de trabalho'                 : '',
+    '.git'                             : '',
+    'GitHub'                           : '',
+    'Downloads'                        : '',
+    'Documentos'                       : '',
+    'Imagens'                          : '',
+    'Screenshots'                      : '',
+    'Modelos'                          : '',
+    'Músicas'                          : '',
+    'Público'                          : '',
+    'Vídeos'                           : '',
+    'Screencasts'                      : '',
+    'Área de trabalho'                 : '',
 }
 
 file_node_exact_matches = {
@@ -159,8 +161,8 @@ file_node_exact_matches = {
     '.xinputrc'                        : '',
     'config'                           : '',
     'dropbox'                          : '',
-    'exact-match-case-sensitive-1.txt' : 'X1',
-    'exact-match-case-sensitive-2'     : 'X2',
+    'exact-match-case-sensitive-1.txt' : '',
+    'exact-match-case-sensitive-2'     : '',
     'favicon.ico'                      : '',
     'gruntfile.coffee'                 : '',
     'gruntfile.js'                     : '',
@@ -179,5 +181,5 @@ file_node_exact_matches = {
 }
 
 def devicon(file):
-  if file.is_directory: return dir_node_exact_matches.get(file.relative_path, '')
+  if file.is_directory: return dir_node_exact_matches.get(file.relative_path, '')
   return file_node_exact_matches.get(file.relative_path, file_node_extensions.get(file.extension, ''))
