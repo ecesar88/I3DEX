@@ -186,9 +186,11 @@ for_window [window_type="menu"] floating enable
 for_window [window_type="GtkFileChooserDialog"] floating enable
 for_window [window_type="Soffice"] floating enable
 for_window [class="Google-chrome" title="Save File"] floating enable
+
 for_window [class="Termite"] border pixel 13
 for_window [class="Pqiv"] move to workspace $WS4
 for_window [class="Spotify"] move to workspace $WS5
+
 assign [class="(Termite)"] $ws1
 assign [class="(Google-chrome|TorLauncher|Navigator|Tor Browser)"] $ws2
 assign [class="(Code)"] $ws3
@@ -216,7 +218,7 @@ bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
 ################ Inicialização
-exec_always --no-startup-id $HOME/.config/scripts/background.sh
+exec_always --no-startup-id feh --bg-scale $HOME/.config/papeldeparede/Dragão.png
 exec_always --no-startup-id $HOME/.config/scripts/pessoal.sh
 exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
 exec_always --no-startup-id compton -b
