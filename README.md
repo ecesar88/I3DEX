@@ -14,12 +14,12 @@
 > 1&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Terminal  
 > 2&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Navegador  
 > 3&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Editor  
-> 4&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Reprodutor  
-> 5&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Bate-papo  
-> 6&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Escritório  
-> 7&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Edição visual  
-> 8&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Jogos  
-> 9&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Email  
+> 4&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Visualizador  
+> 5&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Reprodutor  
+> 6&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Bate-papo  
+> 7&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Escritório  
+> 8&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Edição visual  
+> 9&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Email & Jogos  
 > 10&nbsp;=&nbsp;&nbsp;&nbsp;Outros  
 
 ### Instalação
