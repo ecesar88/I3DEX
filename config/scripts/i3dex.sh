@@ -48,7 +48,7 @@ if pergunta "== > Instalar TRIZEN? Não é necessário instalar caso já tenha!"
 fi
 
 echo "== > Instalando pacotes essenciais com o TRIZEN."
-    trizen -S --needed google-chrome polybar nerd-fonts-source-code-pro pqiv --noconfirm
+    trizen -S --needed google-chrome polybar nerd-fonts-source-code-pro pqiv neofetch --noconfirm
 echo "== >"
 
 echo "== > Habilitando serviços"
@@ -83,12 +83,12 @@ echo "== > Fornecendo permissão aos scripts"
 echo "== >"
 
 echo "== > Medidade de segurança"
-    rm -dR $HOME/.config/{papeldeparede,ranger,compton,dunst,i3,polybar,rofi,scripts,sons}
+    rm -dR $HOME/.config/{neofetch,papeldeparede,ranger,compton,dunst,i3,polybar,rofi,scripts,sons}
 echo "== >"
 
 echo "== > Instalando configuração"
     echo "= > Instalando arquivos básicos"
-        cp -r {papeldeparede,ranger,compton,dunst,i3,polybar,rofi,scripts,sons} $HOME/.config
+        cp -r {neofetch,papeldeparede,ranger,compton,dunst,i3,polybar,rofi,scripts,sons} $HOME/.config
     echo "= > Instalando fontes"
         mkdir $HOME/.local/share/fonts
         cd fonts

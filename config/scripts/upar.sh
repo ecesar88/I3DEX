@@ -38,11 +38,11 @@ echo "== > Verificação"
 echo "== >"
 
 echo "== > Medidas de segurança"
-    sudo rm -dR {papeldeparede,ranger,compton,dunst,i3,polybar,rofi,scripts,sons,termite}
+    sudo rm -dR {neofetch,papeldeparede,ranger,compton,dunst,i3,polybar,rofi,scripts,sons,termite}
 echo "== >"
 
 echo "== > Copiando arquivos"
-    cp -r $HOME/.config/{papeldeparede,ranger,compton,dunst,i3,polybar,rofi,scripts,sons} $HOME/GitHub/I3DEX/config
+    cp -r $HOME/.config/{neofetch,papeldeparede,ranger,compton,dunst,i3,polybar,rofi,scripts,sons} $HOME/GitHub/I3DEX/config
     sudo cp -r /etc/xdg/termite $HOME/GitHub/I3DEX/config
 echo "== >"
 
