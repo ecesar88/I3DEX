@@ -173,14 +173,14 @@ label-urgent = %name%
 label-urgent-padding = 1
 label-urgent-foreground = ${cores.urgente}
 
-################ Upar
+################ Aumentar brihlo
 [module/aumentarbrilho]
 type = custom/text
 content = 
 content-foreground = ${cores.brilho}
 click-left = termite -e exec light -A 5
 
-################ Upar
+################ Diminuir brilho
 [module/diminuirbrilho]
 type = custom/text
 content =  
