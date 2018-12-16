@@ -48,7 +48,7 @@ if pergunta "== > Instalar TRIZEN? Não é necessário instalar caso já tenha!"
 fi
 
 echo "== > Instalando pacotes essenciais com o TRIZEN."
-    trizen -S --needed google-chrome polybar nerd-fonts-source-code-pro pqiv neofetch light --noconfirm
+    trizen -S --needed google-chrome polybar nerd-fonts-source-code-pro pqiv neofetch --noconfirm
 echo "== >"
 
 echo "== > Habilitando serviços"
